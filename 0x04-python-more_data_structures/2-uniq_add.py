@@ -6,5 +6,5 @@ def uniq_add(my_list=[]):
     integer_list = list(unique_integer)
     result = 0
     for element in integer_list:
-        count += element
+        result += element
     return result
