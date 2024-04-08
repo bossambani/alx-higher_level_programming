@@ -13,4 +13,7 @@ if __name__ == "__main__":
         print("{} arguments:".format(count))
     for i in range(count):
         print("{}: {}".format(i + 1, sys.argv[i + 1]))
+<<<<<<< HEAD
 
+=======
+>>>>>>> 59360d507baa4be02bca73345517563d2d1c6dce
