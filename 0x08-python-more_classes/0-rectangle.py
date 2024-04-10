@@ -3,6 +3,6 @@
 """ Rectangle module"""
 
 
-class Rectange:
+class Rectangle:
     """creates a rectangle class"""
     pass
