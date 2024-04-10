@@ -6,7 +6,6 @@
 class Rectangle:
     """ 
     Rectangle class defines a rectangle.
-
     Attributes:
         Width (int): Width of the rectangle.
         height (int): Height of the rectangle.
@@ -52,4 +51,3 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
-    
