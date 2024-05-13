@@ -5,8 +5,8 @@
 def is_same_class(obj, a_class):
     """
     Args:
-            obj: object whose instance is to be checked
-            a_class: instance
+        obj: object whose instance is to be checked
+        a_class: instance
     """
     if type(obj) == a_class:
         return True
