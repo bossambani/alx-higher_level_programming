@@ -3,9 +3,10 @@
 
 
 class MyList(list):
-    """
-        Args: list is the subclass of MyList
-    """
+
     def print_sorted(self):
+    """
+        Args: MyList is the subclass of list
+    """
         sorted_list = sorted(self)
         print(sorted_list)
