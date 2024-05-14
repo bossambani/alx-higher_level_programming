@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""defines a function that checks if the object is an istance of a class
-   that inherited from the specified class.
-"""
+"""Defines ``inherits_from`` method"""
 
 
 def inherits_from(obj, a_class):
