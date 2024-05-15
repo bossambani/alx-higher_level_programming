@@ -1,0 +1,2 @@
+257 small positive integers (from 0 to 256)
+5 small negative integers (from -5 to -1)
