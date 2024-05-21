@@ -7,7 +7,6 @@ class Student:
     defines a tudent by first_name, last_name and age.
     """
 
-
     def __init__(self, first_name, last_name, age):
         """
         Initializes a new student instane.
@@ -35,4 +34,3 @@ class Student:
                 if key in attrs:
                     my_dict[key] = value
             return my_dict
-
