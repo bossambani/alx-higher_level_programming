@@ -77,3 +77,7 @@ class Rectangle(Base):
         """prints out the rectangle instance with character #"""
         for i in range(self.__height):
             print('#'*self.__width)
+
+    def __str__(self):
+        return (f"[{__class__.__name__}] ({self.id}) {self.x}/{self.y} -"
+                f"{self.width}/{self.height}")
