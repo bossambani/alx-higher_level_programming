@@ -75,7 +75,13 @@ class Rectangle(Base):
 
     def display(self):
         """prints out the rectangle instance with character #"""
+        # print the vertical offset (y newlines)
+        print('\n' * self.y, end='')
+        # print each line of the rectangle
         for i in range(self.__height):
+            # print the horizontal offset (x spaces)
+            print(' ' * self.x, end='')
+            # print the rectangle width
             print('#'*self.__width)
 
     def __str__(self):
