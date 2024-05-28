@@ -10,3 +10,11 @@ if __name__ == "__main__":
     r2 = Rectangle(5, 5, 1)
     print(r2)
 
+    r3 = Rectangle(12, 10, 3, 6)
+    print(r3)
+
+    r3 = Rectangle(12, 10, 3, 6, 8)
+    print(r3)
+
+
+
