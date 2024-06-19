@@ -5,6 +5,6 @@ exports.converter = function (base) {
       ? '0'
       : number < 0
         ? '-' + convertToBase(-number)
-        : convertToBase(Math.floor(number / base)) + (number % base).toString(base);
+        : (convertToBase(Math.floor(number / base)) + (number % base).toString(base)).replace(/^0+/, '');
   };
 };
