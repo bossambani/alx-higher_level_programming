@@ -39,7 +39,6 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     dbname = sys.argv[3]
-    searched_state= sys.argv[4]
+    searched_state = sys.argv[4]
 
     list_state_name_searched(username, password, dbname, searched_state)
-
