@@ -19,7 +19,7 @@ if __name__ == "__main__":
     cursor = connection.cursor()
 
     cursor.execute(
-            "SELECT * FROM states WHERE name LIKE 'N%'"
+            "SELECT * FROM states WHERE name LIKE BINARY 'N%'"
             "ORDER BY states.id ASC"
             )
 
