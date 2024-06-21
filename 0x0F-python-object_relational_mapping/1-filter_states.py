@@ -18,7 +18,9 @@ if __name__ == "__main__":
 
     cursor = connection.cursor()
 
-    cursor.execute("SELECT * FROM states WHERE name LIKE %s ORDER BY states.id ASC", ('N%',))
+    cursor.execute(
+            "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC"
+            )
 
     rows = cursor.fetchall()
 
