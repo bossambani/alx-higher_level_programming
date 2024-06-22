@@ -14,11 +14,9 @@ if __name__ == "__main__":
 
     cursor = connection.cursor()
 
-    searched_state = sys.argv[4]
-
     cursor.execute(
-            "SELECT * FROM states WHERE name = %s" % f"'{searched_state}'"
-            )
+            "SELECT * FROM states WHERE name = '{}'"
+            "ORDER BY states.id ASC;".format(sys.argv[4]))
 
     rows = cursor.fetchall()
 
