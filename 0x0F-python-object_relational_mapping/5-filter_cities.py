@@ -20,7 +20,7 @@ if __name__ == "__main__":
     cursor.execute("""SELECT a.name
             FROM cities a
             LEFT JOIN states b
-            ON a.state_id = b.id 
+            ON a.state_id = b.id
             WHERE b.name = %s
             ORDER BY a.id ASC
             """, (sys.argv[4],))
