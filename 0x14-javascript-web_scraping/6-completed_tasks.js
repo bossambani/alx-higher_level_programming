@@ -1,30 +1,39 @@
-
 #!/usr/bin/node
 
-// import the module
+// Import the module
 const request = require('request');
 
-// The first argument is the API URL
+// Get the API URL from command line arguments
 const apiUrl = process.argv[2];
 
 const dictionary = {};
 
 // Make an HTTP GET request to the API URL
-request(apiUrl, function (error, response, body) {
+request(apiUrl, (error, response, body) => {
   if (error) {
     console.error(error);
-  } else {
+  }
+
+  try {
     const data = JSON.parse(body);
-    data.forEach(function (result) {
+
+    if (!Array.isArray(data)) {
+      throw new Error('Expected an array of results');
+    }
+
+    data.forEach(result => {
       if (result.completed === true) {
-        const userid = result.userId;
-        if (!(userid in dictionary)) {
-          dictionary[userid] = 0;
+        const userId = result.userId;
+        if (!(userId in dictionary)) {
+          dictionary[userId] = 0;
         }
-        dictionary[userid] += 1;
+        dictionary[userId] += 1;
       }
     });
+
     console.log(dictionary);
+  } catch (parseError) {
+    console.error('parseError');
+    process.exit(1);
   }
 });
-
