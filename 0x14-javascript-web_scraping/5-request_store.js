@@ -1,27 +1,25 @@
 #!/usr/bin/node
 
-// Import required modules
+// import the module
 const request = require('request');
 const fs = require('fs');
 
-// Get the URL and file path from command line arguments
+// The first argument is the URL to request (GET)
 const url = process.argv[2];
-const filePath = process.argv[3];
 
-// Make a request to the provided URL
-request(url, (error, response, body) => {
+// The file path
+const file = process.argv[3];
+
+// Make an HTTP GET request to the specified URL
+request(url, function (error, response, body) {
+  // check for errors during the request
   if (error) {
     console.error(error);
-    process.exit(1);
+  } else {
+    fs.writeFile(file, body, 'utf-8', function (error, data) {
+      if (error) {
+        console.error(error);
+      }
+    });
   }
-
-  // Write the response body to the specified file in UTF-8 encoding
-  fs.writeFile(filePath, body, 'utf8', err => {
-    if (err) {
-      console.error(err);
-      process.exit(1);
-    }
-
-    console.log(`${filePath}`);
-  });
 });
