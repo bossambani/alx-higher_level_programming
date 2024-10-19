@@ -39,6 +39,7 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
+
         self.__height = value
 
     @property
@@ -72,18 +73,3 @@ class Rectangle(Base):
     def area(self):
         """Calculates the area of the rectangle"""
         return self.__height*self.__width
-
-    def display(self):
-        """prints out the rectangle instance with character #"""
-        # print the vertical offset (y newlines)
-        print('\n' * self.y, end='')
-        # print each line of the rectangle
-        for i in range(self.__height):
-            # print the horizontal offset (x spaces)
-            print(' ' * self.x, end='')
-            # print the rectangle width
-            print('#'*self.__width)
-
-    def __str__(self):
-        return (f"[{__class__.__name__}] ({self.id}) {self.x}/{self.y} - "
-                f"{self.width}/{self.height}")
